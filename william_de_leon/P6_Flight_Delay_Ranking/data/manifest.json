@@ -1,0 +1,225 @@
+{
+  "project": "P6 Flight Delay Ranking (sorting)",
+  "notes": "There is exactly one correct output per file (worst delay first, equal delays in file order). reference gives its md5 and the first 5 ids; the checker validates the order directly.",
+  "datasets": [
+    {
+      "file": "flights_n000015_schedule.csv",
+      "label": "small",
+      "n": 15,
+      "params": {
+        "order": "schedule",
+        "seed": 1
+      },
+      "suitable": [
+        "insertion",
+        "merge",
+        "heap",
+        "counting"
+      ],
+      "reference": {
+        "kind": "exact_order",
+        "md5_of_ids_joined_by_newline": "355502f0e37402debd291c9609a5bdcc",
+        "worst_5": [
+          "NK8319-D076",
+          "DL3046-D076",
+          "NK2792-D076",
+          "F97365-D076",
+          "AA7883-D076"
+        ],
+        "median_delay_min": 3,
+        "worst_delay_min": 87,
+        "best_delay_min": -23,
+        "full_order": [
+          "NK8319-D076",
+          "DL3046-D076",
+          "NK2792-D076",
+          "F97365-D076",
+          "AA7883-D076",
+          "NK9651-D076",
+          "WN6627-D076",
+          "NK7091-D076",
+          "B60353-D076",
+          "UA6015-D076",
+          "F99059-D076",
+          "DL5201-D076",
+          "AA6287-D076",
+          "NK6071-D076",
+          "NK3549-D076"
+        ]
+      }
+    },
+    {
+      "file": "flights_n001000_schedule.csv",
+      "label": "small",
+      "n": 1000,
+      "params": {
+        "order": "schedule",
+        "seed": 2
+      },
+      "suitable": [
+        "insertion",
+        "merge",
+        "heap",
+        "counting"
+      ],
+      "reference": {
+        "kind": "exact_order",
+        "md5_of_ids_joined_by_newline": "2822d5a0c56edbf46983a7c2f1e4b971",
+        "worst_5": [
+          "WN4459-D076",
+          "UA0378-D076",
+          "F93698-D076",
+          "AS2060-D076",
+          "AS6761-D076"
+        ],
+        "median_delay_min": 3,
+        "worst_delay_min": 259,
+        "best_delay_min": -37
+      }
+    },
+    {
+      "file": "flights_n010000_schedule.csv",
+      "label": "medium",
+      "n": 10000,
+      "params": {
+        "order": "schedule",
+        "seed": 3
+      },
+      "suitable": [
+        "insertion",
+        "merge",
+        "heap",
+        "counting"
+      ],
+      "reference": {
+        "kind": "exact_order",
+        "md5_of_ids_joined_by_newline": "623c21c789fc13a91f50a52c486fa1e9",
+        "worst_5": [
+          "AS4431-D076",
+          "B65203-D076",
+          "F91882-D076",
+          "B65934-D076",
+          "WN8695-D076"
+        ],
+        "median_delay_min": 3,
+        "worst_delay_min": 740,
+        "best_delay_min": -30
+      }
+    },
+    {
+      "file": "flights_n010000_nearly_sorted.csv",
+      "label": "medium",
+      "n": 10000,
+      "params": {
+        "order": "nearly_sorted",
+        "seed": 4
+      },
+      "suitable": [
+        "insertion",
+        "merge",
+        "heap",
+        "counting"
+      ],
+      "reference": {
+        "kind": "exact_order",
+        "md5_of_ids_joined_by_newline": "afd181c2f27717ba4ab05118b8d451de",
+        "worst_5": [
+          "NK5374-D076",
+          "DL4664-D076",
+          "F95565-D076",
+          "WN5175-D076",
+          "WN1580-D076"
+        ],
+        "median_delay_min": 3,
+        "worst_delay_min": 784,
+        "best_delay_min": -37
+      }
+    },
+    {
+      "file": "flights_n010000_reversed.csv",
+      "label": "medium",
+      "n": 10000,
+      "params": {
+        "order": "reversed",
+        "seed": 5
+      },
+      "suitable": [
+        "insertion",
+        "merge",
+        "heap",
+        "counting"
+      ],
+      "reference": {
+        "kind": "exact_order",
+        "md5_of_ids_joined_by_newline": "73077cc092172aacc65de1122842d992",
+        "worst_5": [
+          "NK7933-D076",
+          "AA2472-D076",
+          "B64773-D076",
+          "AS9834-D076",
+          "WN8897-D076"
+        ],
+        "median_delay_min": 3,
+        "worst_delay_min": 751,
+        "best_delay_min": -35
+      }
+    },
+    {
+      "file": "flights_n100000_schedule.csv",
+      "label": "large",
+      "n": 100000,
+      "params": {
+        "order": "schedule",
+        "seed": 6
+      },
+      "suitable": [
+        "merge",
+        "heap",
+        "counting"
+      ],
+      "reference": {
+        "kind": "exact_order",
+        "md5_of_ids_joined_by_newline": "48f530d5880b4e60817f1d5c1aff0230",
+        "worst_5": [
+          "F93606-D152",
+          "WN0577-D263",
+          "F91469-D179",
+          "NK8724-D202",
+          "F95981-D037"
+        ],
+        "median_delay_min": 3,
+        "worst_delay_min": 900,
+        "best_delay_min": -41
+      }
+    },
+    {
+      "file": "flights_n100000_nearly_sorted.csv",
+      "label": "large",
+      "n": 100000,
+      "params": {
+        "order": "nearly_sorted",
+        "seed": 7
+      },
+      "suitable": [
+        "merge",
+        "heap",
+        "counting",
+        "insertion"
+      ],
+      "reference": {
+        "kind": "exact_order",
+        "md5_of_ids_joined_by_newline": "43457655c8be81902e59fddaf9dbb0ec",
+        "worst_5": [
+          "DL2149-D136",
+          "WN9720-D276",
+          "DL6751-D145",
+          "NK1127-D333",
+          "AA2418-D237"
+        ],
+        "median_delay_min": 3,
+        "worst_delay_min": 900,
+        "best_delay_min": -39
+      }
+    }
+  ]
+}
